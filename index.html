@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, follow">
+    <title>กราฟแสดงการเติบโตของตลาด BioLNG (ก๊าซ LBM)</title>
+
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="th">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>การเติบโตของตลาด BioLNG (ก๊าซ LBM) และประโยชน์</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+        <style>
+            /* Main container styles */
+            .chart-container {
+                width: 100%;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 20px;
+                font-family: 'Arial', sans-serif;
+            }
+
+            /* Chart wrapper for responsiveness */
+            .chart-wrapper {
+                position: relative;
+                height: 0;
+                padding-bottom: 65%;
+                /* Aspect ratio */
+                margin-bottom: 30px;
+            }
+
+            /* Canvas positioning */
+            .chart-wrapper canvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            /* Card styles */
+            .card {
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                background-color: #fff;
+                overflow: hidden;
+                margin-bottom: 30px;
+            }
+
+            .card-header {
+                background-color: #34A853;
+                color: white;
+                padding: 15px 20px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
+
+            /* Key takeaways section */
+            .key-takeaways {
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                padding: 15px 20px;
+                margin-top: 20px;
+            }
+
+            .key-takeaways h3 {
+                margin-top: 0;
+                color: #34A853;
+                font-size: 18px;
+            }
+
+            .key-takeaways ul {
+                margin-bottom: 0;
+                padding-left: 20px;
+            }
+
+            .key-takeaways li {
+                margin-bottom: 8px;
+                line-height: 1.4;
+            }
+
+            /* Environmental benefits section */
+            .eco-benefits {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+
+            .benefit-item {
+                flex: 1 0 45%;
+                min-width: 250px;
+                margin-bottom: 15px;
+                padding: 15px;
+                border-radius: 8px;
+                background-color: #e9f7ef;
+                display: flex;
+                align-items: center;
+            }
+
+            .benefit-icon {
+                margin-right: 15px;
+                min-width: 40px;
+            }
+
+            .benefit-text {
+                font-size: 14px;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .chart-wrapper {
+                    padding-bottom: 75%;
+                    /* Increase height on smaller screens */
+                }
+
+                .benefit-item {
+                    flex: 1 0 100%;
+                }
+
+                .card-header {
+                    font-size: 18px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .chart-wrapper {
+                    padding-bottom: 90%;
+                    /* Further increase height on mobile */
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="chart-container">
+            <div class="card">
+                <div class="card-header">การคาดการณ์การเติบโตของตลาด BioLNG (ก๊าซ LBM) ปี 2022-2032</div>
+                <div class="card-body">
+                    <div class="chart-wrapper">
+                        <canvas id="biolngChart"></canvas>
+                    </div>
+
+                    <div class="key-takeaways">
+                        <h3>ประเด็นสำคัญ</h3>
+                        <ul>
+                            <li>ตลาด BioLNG ทั่วโลกคาดว่าจะเติบโตจาก 0.7 พันล้านดอลลาร์ในปี 2022 เป็น 3.4 พันล้านดอลลาร์ภายในปี 2032</li>
+                            <li>นี่แสดงถึงอัตราการเติบโตถึง 18% ต่อปี</li>
+                            <li>BioLNG สามารถลดการปล่อยก๊าซคาร์บอนได้มากถึง 90% เมื่อเทียบกับน้ำมันดีเซล</li>
+                            <li>ยุโรป โดยเฉพาะอิตาลีและสเปน เป็นผู้นำในการนำ BioLNG มาใช้และการพัฒนาตลาด</li>
+                        </ul>
+                    </div>
+
+                    <h3>ประโยชน์ต่อสิ่งแวดล้อมของ BioLNG (ก๊าซ LBM)</h3>
+                    <div class="eco-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" width="40" height="40">
+                                    <circle cx="12" cy="12" r="10" fill="#E6F4EA" />
+                                    <path d="M12,5C8.134,5,5,8.134,5,12c0,3.866,3.134,7,7,7s7-3.134,7-7C19,8.134,15.866,5,12,5z M17.12,13.5h-3.62v3.62 c0,0.827-0.673,1.5-1.5,1.5s-1.5-0.673-1.5-1.5V13.5H6.88c-0.827,0-1.5-0.673-1.5-1.5s0.673-1.5,1.5-1.5H10.5V6.88 c0-0.827,0.673-1.5,1.5-1.5s1.5,0.673,1.5,1.5V10.5h3.62c0.827,0,1.5,0.673,1.5,1.5S17.947,13.5,17.12,13.5z"
+                                        fill="#34A853" />
+                                </svg>
+                            </div>
+                            <div class="benefit-text">
+                                <strong>อากาศที่สะอาดขึ้น</strong>: BioLNG (ก๊าซ LBM) ผลิตการปล่อยก๊าซที่เป็นอันตรายน้อยกว่าเชื้อเพลิงฟอสซิล ช่วยปรับปรุงคุณภาพอากาศ
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" width="40" height="40">
+                                    <circle cx="12" cy="12" r="10" fill="#E6F4EA" />
+                                    <path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8c0-4.41,3.59-8,8-8 s8,3.59,8,8C20,16.41,16.41,20,12,20z M11,9.97v7.03h2v-7.03c2.3,0.5,4,2.53,4,4.97c0,2.76-2.24,5-5,5s-5-2.24-5-5 C7,12.5,8.7,10.47,11,9.97z"
+                                        fill="#34A853" />
+                                </svg>
+                            </div>
+                            <div class="benefit-text">
+                                <strong>ความเป็นอิสระทางพลังงาน</strong>: ชุมชนสามารถผลิตเชื้อเพลิงของตนเองได้โดยใช้วัสดุเหลือใช้จากอินทรีย์ในท้องถิ่น
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" width="40" height="40">
+                                    <circle cx="12" cy="12" r="10" fill="#E6F4EA" />
+                                    <path d="M16,6l-1.59,1.59L16,9.17V6z M9,8l-3,4h2v4h2v-4h2L9,8z M12,12.5L13.5,14l4-4l-4-4L12,7.5l1.5,1.5L12,10.5L12,12.5z M18,12l-1.41-1.41L15.17,12l1.41,1.41L18,12z M12,13.5L10.5,12L9,13.5L10.5,15L12,13.5z M8,12L6.59,13.41L8,14.83V12z"
+                                        fill="#34A853" />
+                                </svg>
+                            </div>
+                            <div class="benefit-text">
+                                <strong>เศรษฐกิจหมุนเวียน</strong>: เปลี่ยนของเสียให้เป็นเชื้อเพลิงที่มีค่า โดยผลพลอยได้สามารถนำไปใช้เป็นปุ๋ยได้
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" width="40" height="40">
+                                    <circle cx="12" cy="12" r="10" fill="#E6F4EA" />
+                                    <path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8 S16.41,20,12,20z M8.12,14.47L5.83,12.18L8.12,9.88L9.54,11.29L8.12,12.71L9.54,14.12L8.12,14.47z M13.59,15.88l-2.12-2.12 l2.12-2.12l1.41,1.41l-0.71,0.71l0.71,0.71L13.59,15.88z M18.17,12.18L15.88,9.88l1.41-1.41l1.41,1.41L17.29,11.3l1.41,1.41 L18.17,12.18z"
+                                        fill="#34A853" />
+                                </svg>
+                            </div>
+                            <div class="benefit-text">
+                                <strong>ลดคาร์บอน</strong>: ลดการปล่อยก๊าซคาร์บอนได้มากถึง 90% เมื่อเทียบกับน้ำมันดีเซล
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align:center; margin-top: 20px;">
+            <a href="https://www.pvegroup.asia/th/ผู้จัดหาและผู้จัดจำหน่าย-ก๊าซไบโอมีเทนเหลว-BioLNG-ก๊าซLBM.html" target="_blank"
+                rel="dofollow">
+                เรียนรู้เพิ่มเติมเกี่ยวกับผู้จำหน่ายและจัดจำหน่าย BioLNG (ก๊าซ LBM) จาก โพรเว่อส์ เอนจิเนียริ่ง กรู้ป (โพรเว่อส์ฯ)
+            </a>
+        </p>
+
+        <script>
+            // Wait for DOM to be loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get the canvas element
+                const ctx = document.getElementById('biolngChart').getContext('2d');
+
+                // Chart data
+                const data = {
+                    labels: ['2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032'],
+                    datasets: [
+                        {
+                            label: 'ขนาดตลาด BioLNG (พันล้าน $)',
+                            data: [0.7, 0.83, 0.97, 1.15, 1.36, 1.60, 1.89, 2.23, 2.63, 3.10, 3.4],
+                            backgroundColor: 'rgba(52, 168, 83, 0.2)',
+                            borderColor: 'rgba(52, 168, 83, 1)',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'rgba(52, 168, 83, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(52, 168, 83, 1)',
+                            pointRadius: 5,
+                            pointHoverRadius: 7,
+                            fill: true,
+                            tension: 0.4
+                        }
+                    ]
+                };
+
+                // Chart options
+                const options = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                boxWidth: 15,
+                                padding: 15,
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            bodyFont: {
+                                size: 14
+                            },
+                            padding: 10,
+                            callbacks: {
+                                label: function (context) {
+                                    return `มูลค่าตลาด: $${context.parsed.y} พันล้าน`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'มูลค่าตลาด (พันล้าน $)',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                padding: 10
+                            },
+                            ticks: {
+                                callback: function (value) {
+                                    return '$' + value + 'B';
+                                },
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            grid: {
+                                drawBorder: false
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'ปี',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                padding: 10
+                            },
+                            ticks: {
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    elements: {
+                        line: {
+                            tension: 0.4
+                        }
+                    }
+                };
+
+                // Create the chart
+                const biolngChart = new Chart(ctx, {
+                    type: 'line',
+                    data: data,
+                    options: options
+                });
+
+                // Function to handle responsiveness
+                function handleResize() {
+                    biolngChart.resize();
+                }
+
+                // Listen for window resize events
+                window.addEventListener('resize', handleResize);
+            });
+        </script>
+    </body>
+
+    </html>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
